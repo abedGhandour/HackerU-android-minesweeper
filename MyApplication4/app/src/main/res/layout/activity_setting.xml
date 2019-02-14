@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    tools:context=".SettingActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Number Of Bombs"
+        android:textAlignment="center"
+        android:textSize="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddNumOfBombs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="ChangeEditTextContent"
+            android:tag="1"
+            android:text="+" android:background="@color/green"/>
+
+        <EditText
+            android:id="@+id/editTextNumOfBombs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:hint="Number Of Bombs"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnSubNumOfBombs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="ChangeEditTextContent"
+            android:tag="1"
+            android:text="-"
+            android:background="@color/red"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Size Of Board "
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnAddSizeOfBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="ChangeEditTextContent"
+            android:tag="2"
+            android:text="+"
+            android:background="@color/green"/>
+
+        <EditText
+            android:id="@+id/editTextSizeOfBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="100"
+            android:hint="Size Of Board (Squared)"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnSubSizeOfBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="ChangeEditTextContent"
+            android:tag="2"
+            android:text="-"
+            android:background="@color/red"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="SubmitChanges"
+        android:text="Submit"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Note: Keep the ratio of bombs to board as 1:4 or higher\nlower than that makes the game too hard...\n(example 60 bombs on a 20*20 field is medium,\n70 bombs is hard and 80 is very hard)" />
+
+
+</LinearLayout>
